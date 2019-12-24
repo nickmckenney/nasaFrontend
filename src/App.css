@@ -51,16 +51,17 @@
     transform: rotate(360deg);
   }
 }
-/* @media screen and (max-width: 1050px) {
-  .iframe {
-    width: 85vw;
-    height: 50vw;
+
+@media screen and (max-width: 500px) {
+  .title {
+    position: absolute;
+    top: 50px;
+  }
+  .date {
+    position: absolute;
+    top: 90px;
+  }
+  .picture {
+    margin-top: -81px;
   }
 }
-@media screen and (max-width: 500px) {
-  .iframe {
-    width: 85vw;
-    height: 85vw;
-    border: 10px solid grey;
-  }
-} */
