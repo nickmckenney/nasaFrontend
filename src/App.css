@@ -27,7 +27,8 @@
   top: 50px;
 }
 .picture {
-  width: 65vw;
+  width: 60vw;
+  height: 30vw;
 }
 .explanation {
   font-size: calc(2vmin);
