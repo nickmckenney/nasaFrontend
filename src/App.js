@@ -24,12 +24,13 @@ class App extends Component {
       )
       .then(res => {
         this.setState({ nasa: res.data });
-        this.setState({ picture: this.state.nasa[0].url });
-        this.setState({ explanation: this.state.nasa[0].explanation });
-        this.setState({ title: this.state.nasa[0].title });
-        this.setState({ date: this.state.nasa[0].date });
+        // this.setState({ picture: this.state.nasa[0].url });
+        this.setState({ picture: res.data.url });
+        this.setState({ explanation: res.data.explanation });
+        this.setState({ title: res.data.title });
+        this.setState({ date: res.data.date });
 
-        console.log(this.state.nasa[0]);
+        console.log(res.data);
       });
   };
 
