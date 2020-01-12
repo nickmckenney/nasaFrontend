@@ -18,15 +18,19 @@ class App extends Component {
     this.getData();
   }
   getData = () => {
-    axios.get("https://nasa-picutres.herokuapp.com/").then(res => {
-      this.setState({ nasa: res.data });
-      this.setState({ picture: this.state.nasa[0].url });
-      this.setState({ explanation: this.state.nasa[0].explanation });
-      this.setState({ title: this.state.nasa[0].title });
-      this.setState({ date: this.state.nasa[0].date });
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=GJ6Jvh1c8erMgH5edhmmQ538fNHcSbldUeAc68AK"
+      )
+      .then(res => {
+        this.setState({ nasa: res.data });
+        this.setState({ picture: this.state.nasa[0].url });
+        this.setState({ explanation: this.state.nasa[0].explanation });
+        this.setState({ title: this.state.nasa[0].title });
+        this.setState({ date: this.state.nasa[0].date });
 
-      console.log(this.state.nasa[0]);
-    });
+        console.log(this.state.nasa[0]);
+      });
   };
 
   render() {
